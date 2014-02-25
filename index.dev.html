@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>ChromoLens</title>
+		<meta charset="utf-8"/>
+		<link rel="icon" href="img/favicon-32.png" sizes="32x32">
+		<link rel="stylesheet" type="text/css" href="css/chromolens.css"/>
+		<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"/>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/d3.js"></script>
+		<script type="text/javascript" src="js/core.js" ></script>
+		<script type="text/javascript" src="js/powerfocus.js" ></script>
+		<script type="text/javascript" src="js/mainView.js" ></script>
+		<script type="text/javascript" src="js/modelView.js" ></script>
+		<script type="text/javascript" src="js/featureFinder.js" ></script>
+		<script type="text/javascript" src="js/focusView.js" ></script>
+		<script type="text/javascript" src="js/histogram.js" ></script>
+		<script type="text/javascript" src="js/cytoband.js" ></script>
+		<script type="text/javascript" src="js/adjacency.js" ></script>
+		<script type="text/javascript" src="js/isf.js" ></script>	
+		<script type="text/javascript" src="js/bedGraph.js" ></script>
+		<script type="text/javascript" src="js/gff3.js" ></script>
+		<script type="text/javascript">
+			function preload(filename,type) {
+				document.getElementById('Loading').disabled = false;
+				Views.mainView.getSubView('modelsView').loadFile(filename,type);
+				document.getElementById('Loading').disabled = true;
+			}
+			function setOptions(genomechoice) {
+				var selection = document.selectform.assembly;
+				selection.options.length = 0;
+				if (genomechoice == " ") {
+					document.getElementById('load').disabled = true;
+					selection.options[selection.options.length] = new Option('Assembly',' ');
+				}
+				if (genomechoice == "1") {
+					document.getElementById('load').disabled = false;
+					selection.options[selection.options.length] = new Option('hg19','files/cytoBand.hg19.txt');
+					selection.options[selection.options.length] = new Option('hg18','files/cytoBand.hg18.txt');
+				}
+				if (genomechoice == "2") {
+					document.getElementById('load').disabled = false;
+					selection.options[selection.options.length] = new Option('mm10','files/cytoBand.mm10.txt');
+					selection.options[selection.options.length] = new Option('mm9','files/cytoBand.mm9.txt');
+				}
+			}
+			function displayfiles(genomechoice) {
+				var selection = document.selectform.assembly.value;
+				switch (selection) {
+					case "files/cytoBand.hg19.txt":
+						document.getElementById('fileshg19').style.display='block';
+						document.getElementById('fileshg18').style.display='none';
+						document.getElementById('filesmm10').style.display='none';
+						document.getElementById('filesmm9').style.display='none';
+						document.getElementById('filesdefault').style.display='none';
+						break;
+					case "files/cytoBand.hg18.txt":
+						document.getElementById('fileshg19').style.display='none';
+						document.getElementById('fileshg18').style.display='block';
+						document.getElementById('filesmm10').style.display='none';
+						document.getElementById('filesmm9').style.display='none';
+						document.getElementById('filesdefault').style.display='none';
+						break;
+					case "files/cytoBand.mm10.txt":
+						document.getElementById('fileshg19').style.display='none';
+						document.getElementById('fileshg18').style.display='none';
+						document.getElementById('filesmm10').style.display='block';
+						document.getElementById('filesmm9').style.display='none';
+						document.getElementById('filesdefault').style.display='none';
+						break;
+					case "files/cytoBand.mm9.txt":
+						document.getElementById('fileshg19').style.display='none';
+						document.getElementById('fileshg18').style.display='none';
+						document.getElementById('filesmm10').style.display='none';
+						document.getElementById('filesmm9').style.display='block';
+						document.getElementById('filesdefault').style.display='none';
+						break;
+					default:
+						document.getElementById('fileshg19').style.display='none';
+						document.getElementById('fileshg18').style.display='none';
+						document.getElementById('filesmm10').style.display='none';
+						document.getElementById('filesmm9').style.display='none';
+						document.getElementById('filesdefault').style.display='block';
+						break;
+				}
+			};
+		</script>
+	</head>
+	<body>
+		<div id ="title">
+			<div id="ChromoLensIconTitle"><img src="img/icon.svg" alt="ChromoLens icon" id="ChromoLensIcon" title="ChromoLens"></div>
+			<div id="ChromoLensTitle"><img src="img/logo.svg" alt="ChromoLens logo" id="ChromoLensLogo" title="ChromoLens"></div>
+			<div id="CSItitle" class="title"><a href="http://www.csi.nus.edu.sg/"><img src="img/NUS-CSI.svg" alt="NUS|CSI logo" id="CSIlogo" title="NUS | CSI"></a></div>
+		</div>
+
+		<div id="genomechoice">
+			<form name="selectform">
+				<select name="genome" onchange="setOptions(document.selectform.genome.options[document.selectform.genome.selectedIndex].value);">
+					<option value=" " selected="selected">Genome</option>
+					<option value="1">Homo Sapiens</option>
+					<option value="2">Mus Musculus</option>
+				</select>
+				<select name="assembly" id="selectAssembly" onfocus="displayfiles();" onchange="displayfiles();" onclick="displayfiles();">
+					<option value="" selected="selected">Assembly</option>
+				</select>
+				<input type="button" name="load" id="load" value="Load" disabled ="true"
+					onclick="gv = new GenomeViewer.ChromosomeViewer();
+						preload((document.selectform.assembly.options[document.selectform.assembly.selectedIndex].value),'cytoband');
+						document.getElementById('genomechoice').style.display = 'none';
+						document.getElementById('ChromoLens').style.display = 'block';
+						document.getElementById('ChromoLensTitle').style.display = 'none';
+						document.getElementById('ChromoLensIconTitle').style.display = 'block';
+						document.getElementById('ChromoLens').style.display='block';">
+			</form>
+		</div>
+		<div id="ChromoLens" style="display:none">
+			<div id="status floating-info">
+				<table>
+					<tr>
+						<td colspan="4">
+							<div class="ui-widget hide" style="display:none">
+								<label for="features">Features</label>
+								<input id="features"/>
+							</div>
+						</td>
+					<tr>
+					<tr>
+						<td><div class="focus_info hide" style="display:none">Focus:</div></td>
+						<td><div class="focus_info hide" style="display:none"><span id="focus_detail">N/A</span></div></td>
+						<td><div class="focus_info hide" style="display:none">Zoom:</div></td>
+						<td><div class="focus_info hide" style="display:none"><span id="zoom_detail">N/A</span></div></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="binding_info" class="floating-info">
+				start:	<span id="binding_start">	N/A		</span><br />
+				end:	<span id="binding_end">		N/A		</span><br />
+				pValue:	<span id="binding_pValue">	None	</span><br />
+				peak:	<span id="binding_peak">	N/A		</span><br />
+						<span id="binding_direct"> (direct)	</span>
+			</div>
+			<div id="isf_info" class="floating-info">
+				start:	<span id="isf_start">	N/A		</span><br />
+				end:	<span id="isf_end">		N/A		</span><br />
+				network:<span id="isf_network">	None	</span><br />
+				PET:	<span id="isf_PET">		None	</span><br />
+				pValue:	<span id="isf_pValue">	None	</span><br />
+						<span id="isf_direct"> (direct)	</span>
+			</div>
+			<div id="gff3_info" class="floating-info">
+				<table>
+					<tr>
+						<td>name:</td>
+						<td><span id="gff3_name">	None</span></td>
+						<td>type:</td>
+						<td><span id="gff3_type">	None</span></td>
+					</tr>
+					<tr>
+						<td>gene:</td>
+						<td><span id="gff3_gene">	None</span></td>
+						<td>id:</td>
+						<td><span id="gff3_id">	None</span></td>
+					</tr>
+					<tr>
+						<td>start:</td>
+						<td><span id="gff3_start">	N/A	</span></td>
+						<td>comment:</td>
+						<td><span id="gff3_comment">None</span></td>
+					</tr>
+					<tr>
+						<td>end:</td>
+						<td><span id="gff3_end">	N/A	</span></td>
+						<td>strand:</td>
+						<td><span id="gff3_strand">	None</span></td>
+					</tr>
+				</table>
+			</div>
+
+			<div id="view">
+				<svg class="genome" id="genomesvg"></svg>
+			</div>
+
+			<div>
+				<form id="ModelsView">
+					<p id="parsers" style="display:none"></p>
+					<p style="display:none">Load a file: <input type="file" id="file" name="file"/></p>
+					<p class="hide" style="display:none">
+						Loaded files:
+						<select type="genomechoice" id="filenames" ></select>
+						<input type="button" id="forget" value="Remove" disabled="true"/>
+					</p>
+					<p>
+						Chromosome:
+						<select type="genomechoice" id="chromosomes" ></select>
+						Add view of type
+						<select type="genomechoice" id="view_type" ></select> to
+						<select type="genomechoice" id="dest_view" >
+							<option value="new">a new view</option>
+						</select>
+						<input type="button" id="add" value="Confirm" disabled="true" onclick="
+						document.getElementById('genomesvg').style.border = '0.2em groove silver';
+						var elements = document.getElementsByClassName('hide');
+						for (var e in elements) {elements[e].style.display = 'block';};"
+						/>
+					</p>
+				</form>
+			</div>
+			<div class="hide">
+				<h2>Load Files from server</h2>
+				<div style="display:none" id="fileshg19">
+					<h3>No files available yet.</h3>
+				</div>
+				<div style="display:none" id="fileshg18">
+					<h3>No files available yet.</h3>
+				</div>
+				<div style="display:none" id="filesmm10">
+					<h3>No files available yet.</h3>
+				</div>
+				<div style="display:none" id="filesmm9">
+					<h3>Generic Feature Format Version 3 (GFF3) Files :</h3>
+						<input type="button" id="button_top_level" value="top_level" onclick="
+						document.getElementById('button_top_level').disabled='true';
+						preload('files/top_level.MGSCv37.gff','gff3');
+						"/>
+
+					<h3>Interaction Standard Format (ISF) Files :</h3>
+						<input type="button" id="button_CMF001M" value="CMF001M" onclick="
+						document.getElementById('button_CMF001M').disabled='true';
+						preload('files/CMF001M_cluster_INTRA_bothbs_highconfidence.isf','isf');
+						"/>
+
+						<input type="button" id="button_CMF002M" value="CMF002M" onclick="
+						document.getElementById('button_CMF002M').disabled='true';
+						preload('files/CMF002M_cluster_INTRA_bothbs_highconfidence.isf','isf');
+						"/>
+
+					<h3>BedGraph files :</h3>
+						<input type="button" id="button_input_NPMko" value="input_NPMko" onclick="
+						document.getElementById('button_input_NPMko').disabled='true';
+						preload('files/input_NPMko.bedgraph','bedGraph');
+						"/>
+
+						<input type="button" id="button_input_NPMwt" value="input_NPMwt" onclick="
+						document.getElementById('button_input_NPMwt').disabled='true';
+						preload('files/input_NPMwt.bedgraph','bedGraph');
+						"/>
+
+						<input type="button" id="button_NPMko_CTCF" value="NPMko_CTCF" onclick="
+						document.getElementById('button_NPMko_CTCF').disabled='true';
+						preload('files/NPMko_CTCF.bedgraph','bedGraph');
+						"/>
+
+						<input type="button" id="button_NPMwt_CTCF" value="NPMwt_CTCF" onclick="
+						document.getElementById('button_NPMwt_CTCF').disabled='true';
+						preload('files/NPMwt_CTCF.bedgraph','bedGraph');
+						"/>
+				</div>
+				<div style="display:block" id="filesdefault">
+					<h3>No files available yet.</h3>
+				</div>
+			</div>
+		</div>
+
+		<div id="Loading" style="display:none; position: absolute; background-color: white; color: black;">
+			<i id="LoadingAnimation"></i>
+			<span id="LoadingText">Loading, please wait...</span>
+		</div> 
+
+	</body>
+</html>

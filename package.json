@@ -1,0 +1,34 @@
+{
+  "name": "chromolens",
+  "version": "0.0.0",
+  "description": "ChromoLens ===",
+  "main": "powerfocus.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/caravancoop/chromolens.git"
+  },
+  "author": [
+    {
+      "name": "André Farzat",
+      "email": "andrefarzat@gmail.com"
+    }
+  ],
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/caravancoop/chromolens/issues"
+  },
+  "homepage": "https://github.com/caravancoop/chromolens",
+  "dependencies": {
+    "typescript": "~0.9.5",
+    "uglify-js": "~2.4.12",
+    "jsdoc": "~3.3.0-alpha4"
+  },
+  "devDependencies": {
+    "gulp-util": "~2.2.13",
+    "gulp": "~3.5.0",
+    "DefinitelyTyped": "git://github.com/caravancoop/DefinitelyTyped.git#master"
+  }
+}

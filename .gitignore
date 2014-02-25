@@ -1,15 +1,14 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+# Mac files
+.DS_Store
 
-pids
-logs
-results
-
+# Node files
+bower/
+node_modules/
 npm-debug.log
-node_modules
+
+# Compiled files
+js/
+files/
+
+all_interfaces.js
+doc/

@@ -1,0 +1,1171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1080.5"
+   height="771"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="Dependencies.svg"
+   inkscape:export-filename="/home/max/Downloads/interacbrowser.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata498">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs496" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1145"
+     id="namedview494"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.944"
+     inkscape:cx="548.6377"
+     inkscape:cy="413.18128"
+     inkscape:window-x="-2"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     id="g88"
+     transform="translate(300.5,232)" />
+  <g
+     id="g98"
+     transform="translate(300.5,344.5)" />
+  <g
+     id="g108"
+     transform="translate(165.5,399.5)" />
+  <g
+     id="g118"
+     transform="translate(450.5,399.5)" />
+  <g
+     id="g128"
+     transform="translate(160.5,174.5)" />
+  <g
+     id="g138"
+     transform="translate(455.5,174.5)" />
+  <g
+     id="g148"
+     transform="translate(390.5,289.5)" />
+  <g
+     id="g158"
+     transform="translate(0.5,542.5)" />
+  <g
+     id="g198"
+     transform="translate(271.75,558)" />
+  <g
+     id="g424"
+     transform="translate(347.75,558)" />
+  <g
+     id="g434"
+     transform="translate(315.5,677)" />
+  <g
+     id="g482"
+     transform="translate(565.25,27)" />
+  <g
+     id="g3951"
+     transform="translate(78.582622,256.78249)">
+    <g
+       id="g436-9"
+       transform="translate(101.38136,-116.34746)">
+      <g
+         id="g438-3"
+         transform="translate(4,4)">
+        <rect
+           style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+           y="0"
+           x="0"
+           id="rect440-4"
+           height="70"
+           width="140" />
+      </g>
+      <rect
+         style="fill:#cc4125;stroke:#000000;stroke-width:2"
+         y="0"
+         x="0"
+         id="rect442-7"
+         height="70"
+         width="140" />
+      <g
+         id="g444-6"
+         transform="translate(0,40)">
+        <text
+           id="text446-1"
+           y="-2"
+           style="text-anchor:middle"
+           x="70">
+          <tspan
+             style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+             id="tspan448-3"
+             font-weight="bold"
+             font-size="12"
+             xml:space="preserve">d3</tspan>        </text>
+      </g>
+    </g>
+  </g>
+  <g
+     transform="translate(752.59111,349.00001)"
+     id="g230">
+    <g
+       transform="translate(4,4)"
+       id="g232">
+      <rect
+         width="140"
+         height="70"
+         id="rect234"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect236"
+       x="0"
+       y="0"
+       style="fill:#d0e0e3;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g238">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text240">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan242"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">adjacency</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(535.04872,244.71753)"
+     id="g268">
+    <g
+       transform="translate(4,4)"
+       id="g270">
+      <rect
+         width="140"
+         height="70"
+         id="rect272"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect274"
+       x="0"
+       y="0"
+       style="fill:#fff2cc;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g276">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text278">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan280"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">focusView</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(752.59111,244.71753)"
+     id="g282">
+    <g
+       transform="translate(4,4)"
+       id="g284">
+      <rect
+         width="140"
+         height="70"
+         id="rect286"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect288"
+       x="0"
+       y="0"
+       style="fill:#c9daf8;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g290">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text292">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan294"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">histogram</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(356.18854,349.00001)"
+     id="g296">
+    <g
+       transform="translate(4,4)"
+       id="g298">
+      <rect
+         width="140"
+         height="70"
+         id="rect300"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect302"
+       x="0"
+       y="0"
+       style="fill:#f9cb9c;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g304">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text306">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan308"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">mainView</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(178.64617,349.00001)"
+     id="g310">
+    <g
+       transform="translate(4,4)"
+       id="g312">
+      <rect
+         width="140"
+         height="70"
+         id="rect314"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect316"
+       x="0"
+       y="0"
+       style="fill:#f9cb9c;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g318">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text320">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan322"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">modelView</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(752.59111,140.43502)"
+     id="g324">
+    <g
+       transform="translate(4,4)"
+       id="g326">
+      <rect
+         width="140"
+         height="70"
+         id="rect328"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect330"
+       x="0"
+       y="0"
+       style="fill:#d0e0e3;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g332">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text334">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan336"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">bedGraph</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(535.04872,349.00001)"
+     id="g368">
+    <g
+       transform="translate(4,4)"
+       id="g370">
+      <rect
+         width="140"
+         height="70"
+         id="rect372"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect374"
+       x="0"
+       y="0"
+       style="fill:#d0e0e3;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g376">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text378">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan380"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">cytoband</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(356.18854,453.2825)"
+     id="g402">
+    <g
+       transform="translate(4,4)"
+       id="g404">
+      <rect
+         width="140"
+         height="70"
+         id="rect406"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect408"
+       x="0"
+       y="0"
+       style="fill:#fff2cc;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g410">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text412">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan414"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">featureFinder</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(178.64617,453.2825)"
+     id="g436">
+    <g
+       transform="translate(4,4)"
+       id="g438">
+      <rect
+         width="140"
+         height="70"
+         id="rect440"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect442"
+       x="0"
+       y="0"
+       style="fill:#cc4125;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g444">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text446">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan448"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">jqueryui</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(643.81992,453.2825)"
+     id="g460">
+    <g
+       transform="translate(4,4)"
+       id="g462">
+      <rect
+         width="140"
+         height="70"
+         id="rect464"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect466"
+       x="0"
+       y="0"
+       style="fill:#d0e0e3;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g468">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text470">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan472"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">gff3</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 824.09111,214.43502 0,30.28251"
+     id="path3282"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g324"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g282"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 606.54872,349.00001 0,-30.28248"
+     id="path3288"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-end="#g268"
+     inkscape:connection-end-point="d4"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-start="#g368" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 427.68854,453.2825 0,-30.28249"
+     id="path3294"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g402"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g296"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 715.31992,453.2825 0,-172.06497 -36.2712,0"
+     id="path3298"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-end="#g268"
+     inkscape:connection-end-point="d4"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-start="#g460" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 752.59111,281.21753 -73.54239,0"
+     id="path3300"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g282"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g268"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 322.64617,385.50001 33.54237,0"
+     id="path3306"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g310"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g296"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 356.18854,489.7825 -33.54237,0"
+     id="path3310"
+     inkscape:connector-type="orthogonal"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g402"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g436"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 693.7373,274.35985 -14.68858,6.85769 14.68858,6.85768"
+     id="path3364"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 338.65255,170.07735 -14.68858,6.85768 14.68858,6.85768"
+     id="path3364-0"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 338.65255,274.35985 -14.68858,6.85769 14.68858,6.85768"
+     id="path3364-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 341.49996,378.64233 14.68858,6.85769 -14.68858,6.85767"
+     id="path3364-33"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 341.49996,482.92481 14.68858,6.85768 -14.68858,6.85768"
+     id="path3364-33-9"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 434.54623,437.68859 -6.85769,-14.68858 -6.85768,14.68858"
+     id="path3364-33-0-8"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 435.19881,333.40611 -6.85769,-14.68858 -6.85768,14.68858"
+     id="path3364-33-0-8-1"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 435.86404,229.1236 -6.85768,-14.68858 -6.85769,14.68858"
+     id="path3364-33-0-8-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 830.94879,230.02895 -6.85768,14.68858 -6.85768,-14.68858"
+     id="path3364-33-0-6"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 830.94879,333.40611 -6.85768,-14.68858 -6.85768,14.68858"
+     id="path3364-33-0-8-4"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 613.40641,333.40611 -6.85768,-14.68858 -6.85768,14.68858"
+     id="path3364-33-0-8-2"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 516.19494,274.35985 -14.68858,6.85769 14.68858,6.85768"
+     id="path3364-1"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 258.32165,229.12361 -6.85768,-14.68858 -6.85767,14.68858"
+     id="path3364-33-0-8-5-4"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <g
+     id="g3960"
+     transform="translate(78.582622,256.78248)">
+    <rect
+       style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+       y="-112.34746"
+       x="282.92374"
+       id="rect300-3"
+       height="70"
+       width="140" />
+    <rect
+       width="140"
+       height="70"
+       id="rect302-7"
+       x="278.92374"
+       y="-116.34746"
+       style="fill:#dd7e6b;fill-opacity:1;stroke:#000000;stroke-width:2" />
+    <text
+       id="text306-9"
+       y="-78.347458"
+       style="text-anchor:middle"
+       x="348.92374">
+      <tspan
+         style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+         id="tspan308-1"
+         font-weight="bold"
+         font-size="12"
+         xml:space="preserve">interfaces</tspan>    </text>
+  </g>
+  <g
+     id="g3972"
+     transform="translate(78.582622,261.06499)">
+    <rect
+       style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+       y="-12.347458"
+       x="105.38136"
+       id="rect314-5"
+       height="70"
+       width="140" />
+    <rect
+       width="140"
+       height="70"
+       id="rect316-7"
+       x="101.38136"
+       y="-16.347458"
+       style="fill:#e6b8af;fill-opacity:1;stroke:#000000;stroke-width:2" />
+    <text
+       id="text320-9"
+       y="21.652542"
+       style="text-anchor:middle"
+       x="171.38136">
+      <tspan
+         style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+         id="tspan322-4"
+         font-weight="bold"
+         font-size="12"
+         xml:space="preserve">powerfocus</tspan>    </text>
+  </g>
+  <g
+     id="g3966"
+     transform="translate(78.582622,261.06499)">
+    <rect
+       style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+       y="-12.347458"
+       x="282.92374"
+       id="rect406-8"
+       height="70"
+       width="140" />
+    <rect
+       width="140"
+       height="70"
+       id="rect408-3"
+       x="278.92374"
+       y="-16.347458"
+       style="fill:#dd7e6b;fill-opacity:1;stroke:#000000;stroke-width:2" />
+    <text
+       id="text412-3"
+       y="21.652542"
+       style="text-anchor:middle"
+       x="348.92374">
+      <tspan
+         style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+         id="tspan414-6"
+         font-weight="bold"
+         font-size="12"
+         xml:space="preserve">core</tspan>    </text>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 535.04872,281.21753 -33.54236,0"
+     id="path3978"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g268"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g3966"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 357.50636,281.21753 -33.54238,0"
+     id="path3980"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3966"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g3972"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 251.46398,244.71753 0,-30.2825"
+     id="path3982"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3972"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g3951"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 323.96398,176.93503 33.54238,0"
+     id="path3984"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3951"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g3960"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 429.00636,214.43502 0,30.28251"
+     id="path3986"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3960"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g3966"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 428.53247,318.71753 -0.38268,30.28248"
+     id="path3988"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g3966"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g296"
+     inkscape:connection-end-point="d4" />
+  <g
+     transform="translate(178.64617,557.56498)"
+     id="g436-8">
+    <g
+       transform="translate(4,4)"
+       id="g438-38">
+      <rect
+         width="140"
+         height="70"
+         id="rect440-9"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect442-5"
+       x="0"
+       y="0"
+       style="fill:#cc4125;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g444-3">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text446-6">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan448-0"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">jquery</tspan>      </text>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 250.14617,527.2825 0,30.28248"
+     id="path4112"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g436"
+     inkscape:connection-start-point="d4"
+     inkscape:connection-end="#g436-8"
+     inkscape:connection-end-point="d4" />
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 257.00386,542.8764 -6.85768,14.68858 -6.85768,-14.68858"
+     id="path3364-33-0-6-3"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 824.09111,349.00001 0,-30.28248"
+     id="path4743"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0"
+     inkscape:connection-start="#g230"
+     inkscape:connection-start-point="d4" />
+  <g
+     id="g3951-8"
+     transform="translate(-94.317803,792.58475)">
+    <g
+       id="g436-9-6"
+       transform="translate(101.38136,-116.34746)">
+      <g
+         id="g438-3-6"
+         transform="translate(4,4)">
+        <rect
+           style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+           y="0"
+           x="0"
+           id="rect440-4-8"
+           height="70"
+           width="140" />
+      </g>
+      <rect
+         style="fill:#cc4125;stroke:#000000;stroke-width:2"
+         y="0"
+         x="0"
+         id="rect442-7-4"
+         height="70"
+         width="140" />
+      <g
+         id="g444-6-9"
+         transform="translate(0,40)">
+        <text
+           id="text446-1-1"
+           y="-2"
+           style="text-anchor:middle"
+           x="70">
+          <tspan
+             style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+             id="tspan448-3-3"
+             font-weight="bold"
+             font-size="12"
+             xml:space="preserve" />        </text>
+        <text
+           y="-2"
+           style="text-anchor:middle"
+           x="70"
+           id="text5015">
+          <tspan
+             style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+             font-weight="bold"
+             font-size="12"
+             xml:space="preserve"
+             id="tspan5017">dependencies</tspan>        </text>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g3960-0"
+     transform="translate(-97.072044,792.58475)">
+    <rect
+       style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+       y="-112.34746"
+       x="282.92374"
+       id="rect300-3-3"
+       height="70"
+       width="140" />
+    <rect
+       width="140"
+       height="70"
+       id="rect302-7-9"
+       x="278.92374"
+       y="-116.34746"
+       style="fill:#dd7e6b;fill-opacity:1;stroke:#000000;stroke-width:2" />
+    <text
+       id="text306-9-4"
+       y="-78.347458"
+       style="text-anchor:middle"
+       x="348.92374">
+      <tspan
+         style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+         id="tspan308-1-9"
+         font-weight="bold"
+         font-size="12"
+         xml:space="preserve">interfaces</tspan>    </text>
+  </g>
+  <g
+     id="g3972-4"
+     transform="translate(246.78389,692.58475)">
+    <rect
+       style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+       y="-12.347458"
+       x="105.38136"
+       id="rect314-5-0"
+       height="70"
+       width="140" />
+    <rect
+       width="140"
+       height="70"
+       id="rect316-7-2"
+       x="101.38136"
+       y="-16.347458"
+       style="fill:#e6b8af;fill-opacity:1;stroke:#000000;stroke-width:2" />
+    <text
+       id="text320-9-0"
+       y="21.652542"
+       style="text-anchor:middle"
+       x="171.38136">
+      <tspan
+         style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+         id="tspan322-4-3"
+         font-weight="bold"
+         font-size="12"
+         xml:space="preserve">powerfocus</tspan>    </text>
+  </g>
+  <g
+     transform="translate(538.84321,677.2966)"
+     id="g310-0">
+    <g
+       transform="translate(4,4)"
+       id="g312-0">
+      <rect
+         width="140"
+         height="70"
+         id="rect314-7"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect316-2"
+       x="0"
+       y="0"
+       style="fill:#f9cb9c;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g318-8">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text320-2">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan322-7"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">view constructor</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(718.92796,673.05933)"
+     id="g268-7">
+    <g
+       transform="translate(4,4)"
+       id="g270-1">
+      <rect
+         width="140"
+         height="70"
+         id="rect272-2"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect274-6"
+       x="0"
+       y="0"
+       style="fill:#fff2cc;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g276-5">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text278-6">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan280-6"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">focus</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(892.65677,669.88136)"
+     id="g368-1">
+    <g
+       transform="translate(4,4)"
+       id="g370-2">
+      <rect
+         width="140"
+         height="70"
+         id="rect372-4"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect374-8"
+       x="0"
+       y="0"
+       style="fill:#d0e0e3;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g376-3">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text378-8">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan380-1"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">model</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(892.65677,563.44915)"
+     id="g254-3">
+    <g
+       transform="translate(4,4)"
+       id="g256-1">
+      <rect
+         width="140"
+         height="70"
+         id="rect258-7"
+         x="0"
+         y="0"
+         style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6" />
+    </g>
+    <rect
+       width="140"
+       height="70"
+       id="rect260-2"
+       x="0"
+       y="0"
+       style="fill:#c9daf8;stroke:#000000;stroke-width:2" />
+    <g
+       transform="translate(0,40)"
+       id="g262-7">
+      <text
+         x="70"
+         style="text-anchor:middle"
+         y="-2"
+         id="text264-9">
+        <tspan
+           xml:space="preserve"
+           font-size="12"
+           font-weight="bold"
+           id="tspan266-7"
+           style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial">visualization</tspan>      </text>
+    </g>
+  </g>
+  <g
+     transform="translate(930.43644,242.97458)"
+     id="g230-5">
+    <g
+       id="g3238"
+       transform="translate(0,1.74295)">
+      <g
+         id="g232-2"
+         transform="translate(4,4)">
+        <rect
+           style="fill:#a8a8a8;fill-opacity:0.6;stroke:#a8a8a8;stroke-width:0;stroke-opacity:0.6"
+           y="0"
+           x="0"
+           id="rect234-8"
+           height="70"
+           width="140" />
+      </g>
+      <rect
+         style="fill:#d0e0e3;stroke:#000000;stroke-width:2"
+         y="0"
+         x="0"
+         id="rect236-7"
+         height="70"
+         width="140" />
+      <g
+         id="g238-1"
+         transform="translate(0,40)">
+        <text
+           id="text240-6"
+           y="-2"
+           style="text-anchor:middle"
+           x="70">
+          <tspan
+             style="font-size:12px;font-weight:bold;fill:#000000;font-family:Arial"
+             id="tspan242-1"
+             font-weight="bold"
+             font-size="12"
+             xml:space="preserve">isf</tspan>        </text>
+      </g>
+    </g>
+  </g>
+  <path
+     style="fill:none;stroke:#000000"
+     d="m 910.69706,274.35984 -14.68858,6.85769 14.68858,6.85769"
+     id="path3364-1-5"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="ccc" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 929.55084,281.21753 -33.54236,0"
+     id="path3978-8"
+     inkscape:connector-type="polyline"
+     inkscape:connector-curvature="0" />
+</svg>
