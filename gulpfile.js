@@ -22,7 +22,7 @@ gulp.task('update', function(){
     exec('npm install --update');
 
     console.log('Running: bower install  --update');
-    exec('bower install  --update');
+    exec('./node_modules/bower/bin/bower install  --update');
 });
 
 /**
