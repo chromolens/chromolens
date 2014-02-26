@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "Code base for Cancer Science Institute of Singapore",
   "main": "powerfocus.js",
-  "keywords": ["chromolens"],
+  "keywords": [
+    "chromolens"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,6 +32,7 @@
   "devDependencies": {
     "gulp-util": "~2.2.13",
     "gulp": "~3.5.0",
-    "DefinitelyTyped": "git://github.com/chromolens/DefinitelyTyped.git#master"
+    "DefinitelyTyped": "git://github.com/chromolens/DefinitelyTyped.git#master",
+    "bower": "~1.2.8"
   }
 }
