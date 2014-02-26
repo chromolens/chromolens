@@ -169,7 +169,7 @@ module GFF3 {
             return this.type;
         }
         public treeString(indent:string):string {
-            var r = indent + this['constructor'].name + ' ' + this.type + ' ' + this.name + ' ' + this.pos_in_track;
+            var r = indent + this['constructor']['name'] + ' ' + this.type + ' ' + this.name + ' ' + this.pos_in_track;
             r += '\n';
             indent += '\t';
             this.children().forEach(function (c:FeatureBase) {r += c.treeString(indent);});

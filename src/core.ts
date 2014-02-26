@@ -354,7 +354,7 @@ module Views {
          * @return {string}
          */
         public getTypeName(): string {
-            return this['constructor'].name;
+            return this['constructor']['name'];
         }
 
     }

@@ -19,9 +19,9 @@ gulp.task('default', function(){
  */
 gulp.task('update', function(){
     console.log('Running: npm install --update');
-    exec('npm install --update');
+    exec('npm install --update --force');
 
-    console.log('Running: bower install  --update');
+    console.log('Running: bower install --update');
     exec('./node_modules/bower/bin/bower install  --update');
 });
 
