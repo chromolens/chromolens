@@ -30,6 +30,6 @@
   "devDependencies": {
     "gulp-util": "~2.2.13",
     "gulp": "~3.5.0",
-    "DefinitelyTyped": "git://github.com/caravancoop/DefinitelyTyped.git#master"
+    "DefinitelyTyped": "git://github.com/chromolens/DefinitelyTyped.git#master"
   }
 }
