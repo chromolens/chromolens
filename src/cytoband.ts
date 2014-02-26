@@ -141,6 +141,7 @@ module Cytoband {
      */
     class CytobandParser implements Parsers.Parser {
         private time:number;
+
         public parse_str(lines:Parsers.LineReader, id: string, desired_chroname?:string) : Model.ChromosomeSet {
             this.time = (new Date()).getTime();
             var chromosomes: D3.Map = d3.map();

@@ -173,6 +173,7 @@ declare module Model {
         next(): string;
         reset():void;
         setStartPoint(regex: RegExp):void;
+        getFirstLines():string[];
     }
 
     /**

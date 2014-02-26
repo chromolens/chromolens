@@ -1083,16 +1083,13 @@ module Parsers {
             }
         }
 
+
         /**
-         * Returns the next valid line.
-         * Null if the last line was already reached.
-         *
-         * Invalid lines:
-         *  - line beginning with # character
-         *
-         * @return {string}
+         * Returns the next line.
+         * Doesn't matter whether it is a valid or not
+         * @return {string} [description]
          */
-        public next():string {
+        private _next():string {
             if (this.pos < 0)
                 return null;
 
@@ -1128,6 +1125,27 @@ module Parsers {
         }
 
         /**
+         * Returns the next valid line.
+         * Null if the last line was already reached.
+         *
+         * Invalid lines:
+         *  - line beginning with # character
+         *
+         * @return {string}
+         */
+        public next():string {
+            var line = this._next(),
+                firstChar;
+
+            if( !line ) {
+                return line;
+            }
+
+            firstChar = line[0];
+            return firstChar === '#' || firstChar === '@' ? this.next() : line;
+        }
+
+        /**
          * Reset the cursor to the initial position
          */
         public reset() {
@@ -1143,6 +1161,25 @@ module Parsers {
             if( position >= 0 ){
                 this.pos = position;
             }
+        }
+
+        /**
+         * Returns the first 5 lines
+         * @return {string[]}
+         */
+        public getFirstLines(){
+            var lines = [],
+                max = 5,
+                i = 0;
+
+            this.reset();
+
+            for(; i < max; i += 1){
+                lines.push( this._next() );
+            }
+
+            this.reset();
+            return lines;
         }
     }
 

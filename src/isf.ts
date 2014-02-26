@@ -140,49 +140,58 @@ module ISF {
      * @extends Parsers.Parser
      */
     class isfParser implements Parsers.Parser {
+
+        /**
+         * Validates the header
+         * @return {Boolean} true if the there is chromosome in the header
+         */
+        public validateHeader(lineReader:Parsers.LineReader, chro?:string){
+            var lines = lineReader.getFirstLines();
+            var headerType = lines[0].split('\t');
+            var headerFile = lines[1].split('\t');
+            var has_chro = (headerFile[0] == '#Chr');
+            assert(has_chro || (chro !== undefined), '');
+            assert(headerFile.length == (has_chro?8:7), '');
+
+            return has_chro;
+        }
+
+        /**
+         * 
+         */
         public parse_str(lines:Parsers.LineReader, id: string, chro?:string) : Model.ChromosomeSet {
+            var has_chro = this.validateHeader(lines, chro);
 
-            //@HD   VN  0.7 AS  MM9 SP  Mus_Musculus
-            //#Chr  Start   End Network_ID  Interaction_ID  Direct_binding  pValue  PET
-            //chr1  83145602    83148597    606 606 .   1.28817e-05 2
-            //chr1  137853959   137856772   606 606 .   1.28817e-05 2
+            var chromosomes : D3.Map = d3.map();
+            var current_chro = chro;
+            var chroModel;
+            if (chro !== undefined) {
+                chroModel = new isfChromosomeModel(chro);
+                chromosomes.set(chro, chroModel);
+            }
 
-            //try {
-                var headerType = lines.next().split('\t');
-                var headerFile = lines.next().split('\t');
-                var has_chro = (headerFile[0] == '#Chr');
-                assert(has_chro || (chro !== undefined), '');
-                assert(headerFile.length == (has_chro?8:7), '');
-                var chromosomes : D3.Map = d3.map();
-                var current_chro = chro;
-                var chroModel;
-                if (chro !== undefined) {
-                    chroModel = new isfChromosomeModel(chro);
-                    chromosomes.set(chro, chroModel);
+            var line:string;
+            while ((line = lines.next()) !== null) {
+                var vals = line.split('\t');
+                if (has_chro) {
+                    current_chro = vals.shift();
                 }
-                var line:string;
-                while ((line = lines.next()) !== null) {
-                    var vals = line.split('\t');
-                    if (has_chro) {
-                        current_chro = vals.shift();
+                if (chro === undefined) {
+                    if (!chromosomes.has(current_chro)) {
+                        chromosomes.set(current_chro, new isfChromosomeModel(current_chro));
                     }
-                    if (chro === undefined) {
-                        if (!chromosomes.has(current_chro)) {
-                            chromosomes.set(current_chro, new isfChromosomeModel(current_chro));
-                        }
-                        chroModel = chromosomes.get(current_chro);
-                        chroModel.addBinding.apply(chroModel, vals);
-                    } else if (chro == current_chro) {
-                        chroModel.addBinding.apply(chroModel, vals);
-                    }
+                    chroModel = chromosomes.get(current_chro);
+                    chroModel.addBinding.apply(chroModel, vals);
+                } else if (chro == current_chro) {
+                    chroModel.addBinding.apply(chroModel, vals);
                 }
-                chromosomes.forEach(function(key: string, chro: isfChromosomeModel) {
-                    chro.optimize();
-                });
-                return new isfChromosomeSet(id, chromosomes);
-            //} catch (Exception) {
+            }
 
-            //}
+            chromosomes.forEach(function(key: string, chro: isfChromosomeModel) {
+                chro.optimize();
+            });
+
+            return new isfChromosomeSet(id, chromosomes);
         }
     }
     Parsers.registry.register('isf', new isfParser());
