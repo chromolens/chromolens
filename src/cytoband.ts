@@ -149,9 +149,6 @@ module Cytoband {
             var centromer_first = 0;
             var line:string;
             while ((line = lines.next()) !== null) {
-                if (line.charAt(0) == '#') {
-                    continue;
-                }
                 var components: string[] = line.split('\t');
                 assert(components.length == 5);
                 var chroname = components[0];

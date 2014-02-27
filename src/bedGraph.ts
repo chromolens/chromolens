@@ -166,9 +166,6 @@ module BedGraph {
             lines.setStartPoint( new RegExp(desired_chroname+"\\s") );
 
             while ((line = lines.next()) !== null) {
-                if (line.charAt(0) == '#') {
-                    continue;
-                }
                 var components: string[] = line.split(' ');
                 if (components.length == 1 && line.indexOf('\t') >= 0) {
                     components = line.split('\t');

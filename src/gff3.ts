@@ -641,7 +641,30 @@ module GFF3 {
      */
     class GFF3Parser implements Parsers.Parser {
         private time:number;
-        public parse_str(lines:Parsers.LineReader, name: string, desired_chroname?:string) : Model.ChromosomeSet {
+
+        /**
+         * Validates the header
+         * @return {Boolean} true if the there is chromosome in the header
+         */
+        public validateHeader(lineReader:Parsers.LineReader){
+            var lines = lineReader.getFirstLines(),
+                len = lines.length,
+                i = 0;
+
+            for(; i < len; i += 1){
+                if( lines[i] && lines[i].indexOf('gff-version') !== -1 ){
+                    return lines[i].indexOf('3') > 0;
+                }
+            }
+            
+            return false;
+        }
+
+        /**
+         * 
+         */
+        public parse_str(lines:Parsers.LineReaderImpl, name: string, desired_chroname?:string) : Model.ChromosomeSet {
+            assert(this.validateHeader(lines), 'Invalid header for GFF3 format');
             this.time = (new Date()).getTime();
 
             feature_uid_counter = 0;

@@ -1202,8 +1202,6 @@ module Parsers {
             var line:string;
             lines.next(); // skip first
             while ((line = lines.next()) !== null) {
-                if (line.charAt(0) == '#')
-                    continue;
                 var pos = line.indexOf(' ');
                 if (pos == -1)
                     pos = line.indexOf('\t');
