@@ -283,20 +283,21 @@ module GFF3 {
             var args:D3.Map = d3.map();
             parts[8].split(';').forEach(function(a:string) {
                 var kv:string[] = a.split('=',2);
-                var v:string[] = kv[1].split(',');
-                for (var i = 0; i< v.length; i++) {
-                    v[i] = unescape(v[i]);
-                }
+
+                var v:string[] = kv[1].split(',').map(function(v:string){
+                    return unescape(v[i]);
+                });
+
                 args.set(kv[0], v);
             });
             var source:string   = unescape(parts[1]);
             // TODO: Refer to SOFA?
             var type:string     = unescape(parts[2]);
-            var start:number    = parseInt(parts[3]);
-            var end:number      = parseInt(parts[4]);
+            var start:number    = parseInt(parts[3], 10);
+            var end:number      = parseInt(parts[4], 10);
             var score:number    = parseFloat(parts[5]);
             var strand:string   = parts[6].charAt(0); // convert to a number?
-            var phase:number    = parseInt(parts[7]);
+            var phase:number    = parseInt(parts[7], 10);
             var name:string;
             var parents_id:string[];
             var alias:string;
@@ -644,65 +645,64 @@ module GFF3 {
 
         /**
          * Validates the header
-         * @return {Boolean} true if the there is chromosome in the header
+         * @return {D3.Map} The map with the chromosomes extracted from the header
          */
         public validateHeader(lineReader:Parsers.LineReader){
             var lines = lineReader.getFirstLines(),
                 len = lines.length,
-                i = 0;
+                i = 0,
+                line;
+
+            var chromosomes:D3.Map = d3.map();
 
             for(; i < len; i += 1){
-                if( lines[i] && lines[i].indexOf('gff-version') !== -1 ){
-                    return lines[i].indexOf('3') > 0;
+                line = lines[i];
+
+                if( !line ){
+                    continue;
+                }
+
+                if( line.indexOf('gff-version') !== -1 ){
+                    assert(line.indexOf('3') !== -1, 'Invalid header for GFF3 format');
+                }
+
+                if ( line.indexOf('sequence-region ') !== -1 ) {
+                    var parts = line.split(' ');
+                    assert(!chromosomes.has(parts[1]));
+                    
+                    var chro:ChromosomeGFF3Model = new ChromosomeGFF3Model(parts[1]);
+                    chromosomes.set(parts[1], chro);
+                    chro.start = parseInt(parts[2]);
+                    chro.end = parseInt(parts[3]);
                 }
             }
             
-            return false;
+            return chromosomes;
         }
 
         /**
          * 
          */
         public parse_str(lines:Parsers.LineReaderImpl, name: string, desired_chroname?:string) : Model.ChromosomeSet {
-            assert(this.validateHeader(lines), 'Invalid header for GFF3 format');
             this.time = (new Date()).getTime();
 
             feature_uid_counter = 0;
 
-            var chromosomes:D3.Map = d3.map();
-            var chro:ChromosomeGFF3Model;// = new ChromosomeGFF3Model();
+            var chromosomes:D3.Map = this.validateHeader(lines);;
+            var chro:ChromosomeGFF3Model;
             var line:string;
 
             while ((line = lines.next()) !== null) {
-                if (line.charAt(0) == '#') {
-                    if (line.charAt(0) == '#') {
-                        // pragma
-                        line = line.substring(2);
-                        if (line.substr(0,16) == 'sequence-region ') {
-                            var parts = line.split(' ');
-                            //var l: Landmark = new Landmark(parts[1], parseInt(parts[2]), parseInt(parts[3]));
-                            //chro.addFeature(l);
-                            assert(!chromosomes.has(parts[1]));
-                            chro = new ChromosomeGFF3Model(parts[1]);
-                            chromosomes.set(parts[1], chro);
-                            chro.start  = parseInt(parts[2]);
-                            chro.end    = parseInt(parts[3]);
-                        }
-                    } else {
-                        // comment
-                    }
-                } else {
-                    var parts: string[] = line.trim().split('\t');
-                    assert(parts.length >= 9);
-                    var f:GFF3Feature = GFF3Feature.from_parts(parts);
-                    var chroname = parts[0];
-                    chro = chromosomes.get(chroname);
-                    if (chro === undefined) {
-                        chro = new ChromosomeGFF3Model(chroname);
-                        chromosomes.set(chroname, chro);
-                    }
-                    chro.addFeature(f);
+                var parts: string[] = line.trim().split('\t');
+                assert(parts.length >= 9);
+                var f:GFF3Feature = GFF3Feature.from_parts(parts);
+                var chroname = parts[0];
+                chro = chromosomes.get(chroname);
+                if (chro === undefined) {
+                    chro = new ChromosomeGFF3Model(chroname);
+                    chromosomes.set(chroname, chro);
                 }
+                chro.addFeature(f);
             }
             console.log("parse:"+((new Date()).getTime()-this.time));
             // TODO: Delay until presentation? A lot of work is done later anyway.
