@@ -285,7 +285,7 @@ module GFF3 {
                 var kv:string[] = a.split('=',2);
 
                 var v:string[] = kv[1].split(',').map(function(v:string){
-                    return unescape(v[i]);
+                    return unescape(v);
                 });
 
                 args.set(kv[0], v);
@@ -304,27 +304,31 @@ module GFF3 {
             var display_name:string;
             var target:string;
             var argvals: string[];
-            argvals = args.get('Parent');
-            if (argvals !== undefined) {
-                parents_id = argvals;
+
+            if (args.has('Parent')) {
+                parents_id = args.get('Parent');
                 args.remove('Parent');
             } else {
                 parents_id = [parts[0]];
             }
-            argvals = args.get('Alias');
-            if (argvals !== undefined) {
+
+            if (args.has('Alias')) {
+                argvals = args.get('Alias');
                 assert(argvals.length == 1);
                 alias = argvals[0];
                 args.remove('Alias');
             }
-            argvals = args.get('Name');
-            if (argvals !== undefined) {
+
+            if (args.has('Name')) {
+                argvals = args.get('Name');
                 assert(argvals.length == 1);
                 display_name = argvals[0];
                 args.remove('Name');
             }
-            argvals = args.get('ID');
-            if (argvals !== undefined) {
+
+            
+            if (args.has('ID')) {
+                argvals = args.get('ID');
                 assert(argvals.length == 1);
                 name = argvals[0];
                 args.remove('ID');
@@ -333,12 +337,14 @@ module GFF3 {
             } else {
                 // anomaly, but exists
             }
-            argvals = args.get('Target');
-            if (argvals !== undefined) {
+
+            if (args.has('Target')) {
+                argvals = args.get('Target');
                 assert(argvals.length == 1);
                 target = argvals[0];
                 args.remove('Target');
             }
+
             return new GFF3Feature(name, start, end, type, target, source, score,
                 strand, phase, display_name, alias, args, parents_id);
         }
