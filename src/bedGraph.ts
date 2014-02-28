@@ -148,6 +148,36 @@ module BedGraph {
      */
     class BedGraphParser implements Parsers.Parser {
         private time:number;
+
+        /**
+         * Validates the header
+         * @return {D3.Map} The map with the chromosomes extracted from the header
+         */
+        public validateHeader(lineReader:Parsers.LineReader){
+            var lines = lineReader.getFirstLines(),
+                len = lines.length,
+                i = 0,
+                line;
+
+
+            for(; i < len; i += 1){
+                var components:string[] = lines[i].split(' ');
+
+                if (components.length == 1 && lines[i].indexOf('\t') >= 0) {
+                    components = lines[i].split('\t');
+                }
+
+                if (components[0] == 'browser') {
+                    continue;
+                }
+
+                if (components[0] == 'track') {
+                    assert(components.indexOf('type=bedGraph') > 0);
+                    continue;
+                }
+            }
+
+        }
         
         /**
          * Parsers the given string and returns the Model.ChromosomeSet
@@ -155,6 +185,10 @@ module BedGraph {
          * @return {Model.ChromosomeSet}
          */
         public parse_str(lines:Parsers.LineReader, id:string, desired_chroname?:string) : Model.ChromosomeSet {
+            var time = (new Date()).getTime();
+
+            this.validateHeader(lines);
+
             var cset: BedGraphChromosomeSet = new BedGraphChromosomeSet(id, this, lines);
             if (desired_chroname == undefined) {
                 cset.parseNames();
@@ -167,17 +201,7 @@ module BedGraph {
 
             while ((line = lines.next()) !== null) {
                 var components: string[] = line.split(' ');
-                if (components.length == 1 && line.indexOf('\t') >= 0) {
-                    components = line.split('\t');
-                }
-                if (components[0] == 'browser') {
-                    continue;
-                }
-                if (components[0] == 'track') {
-                    assert(components.indexOf('type=bedGraph') > 0);
-                    // get parameters, parse differently
-                    continue;
-                }
+                
                 assert(components.length == 4);
                 var chroname = components[0];
                 if (chroname == desired_chroname){
