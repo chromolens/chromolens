@@ -183,7 +183,7 @@
             </div>
         </div>
 
-        <div id="Loading" style="display:none; position: absolute; background-color: white; color: black;">
+        <div id="Loading">
             <i id="LoadingAnimation"></i>
             <span id="LoadingText">Loading, please wait...</span>
         </div> 
@@ -210,9 +210,9 @@
 
         <script type="text/javascript">
             function preload(filename,type) {
-                document.getElementById('Loading').disabled = false;
+                showLoading();
                 Views.mainView.getSubView('modelsView').loadFile(filename,type);
-                document.getElementById('Loading').disabled = true;
+                hideLoading();
             }
 
             function setOptions(genomechoice) {

@@ -1,6 +1,21 @@
 ///<reference path="interfaces.d.ts" />
 ///<reference path="powerfocus.d.ts" />
 
+
+/**
+ * Blocks the screen and shows the loading message
+ */
+function showLoading(){
+    jQuery("#Loading").addClass('is-shown');
+}
+
+/**
+ * Unblocks the screen and hides the loading message
+ */
+function hideLoading(){
+    jQuery("#Loading").removeClass('is-shown');
+}
+
 /**
   * False Assert function.
   * Throws the message if the truth value is false.

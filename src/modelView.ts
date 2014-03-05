@@ -34,7 +34,7 @@ module GenomeViewer {
 
             this.fileLoadWidget = form.select("#file");
             this.fileLoadWidget.on("change", function() {
-                document.getElementById("Loading").style.display = "block";
+                showLoading();
                 this_in_closure.fileLoad();
             })
             this.fileNamesSelect = form.select("#filenames").on("change", function(){this_in_closure.setChroView();});
@@ -45,7 +45,7 @@ module GenomeViewer {
             this.forgetButton = form.select("#forget");
             this.forgetButton.attr("disable", true).on("click", function(){this_in_closure.forgetFile();});
             this.addButton = form.select("#add").on("click", function(){
-                document.getElementById("Loading").style.display = "block";
+                showLoading();
                 this_in_closure.doAddView();
             })
         }
@@ -130,7 +130,7 @@ module GenomeViewer {
                 this.setChroView(filename);
                 this.addButton.attr('disabled', null);
                 this.forgetButton.attr('disabled', null);
-                document.getElementById("Loading").style.display = "none";
+                hideLoading();
             } catch (e) {
                 alert(e);
             }
@@ -169,7 +169,7 @@ module GenomeViewer {
             panel.setChromosome(chro);
             view.invalidate();
             mainPanel.layout();
-            document.getElementById("Loading").style.display = "none";
+            hideLoading();
         }
 
         static create(parent: Views.View, name:string, role:string, args?): ModelsView {
