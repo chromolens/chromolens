@@ -19,15 +19,19 @@ function hideLoading(){
 
 /**
  * Shows the loading message and the progress bar
- * @param  {[type]} ev [description]
- * @return {[type]}    [description]
+ * @event
+ * @param  {XMLHttpRequestProgressEvent} ev
  */
 function showProgress(ev){
     showLoading();
     jQuery('#LoadingBarWrapper').show();
 
-    var value:string = ""+((ev.loaded / ev.total) * 100);
-    jQuery('#LoadingBar').val( value );
+    var value:Number = (ev.loaded / ev.total) * 100;
+    jQuery('#LoadingBar').val( value.toString() );
+
+    if( value >= 100 ){
+        hideLoading();
+    }
 }
 
 /**

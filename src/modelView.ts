@@ -105,6 +105,7 @@ module GenomeViewer {
 
         public loadFile(filename:string, parser_type:string, content?:string) {
             var self = this;
+
             if (content === undefined) {
                 var req:XMLHttpRequest = new XMLHttpRequest();
                 req.onload = function() {
@@ -120,9 +121,9 @@ module GenomeViewer {
                 }
                 return;
             }
+
             try {
-                var cSet: Model.ChromosomeSet =
-                    Model.manager.load_str(content, filename, parser_type);
+                var cSet:Model.ChromosomeSet = Model.manager.load_str(content, filename, parser_type);
                 this.filenames.push(filename);
                 var filenames: D3.UpdateSelection = this.fileNamesSelect.selectAll("option").data(this.filenames);
                 filenames.enter().append("option");
