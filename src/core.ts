@@ -792,7 +792,7 @@ module Model {
                 id += id + '#' + chro;
             }
             var lr:Parsers.LineReader = new Parsers.LineReaderImpl(content);
-            var cs :ChromosomeSet = parser.parse_str(lr, id, chro);
+            var cs:ChromosomeSet = parser.parse_str(lr, id, chro);
             this.chromosomeSets.set(id, cs);
             return cs;
         }
