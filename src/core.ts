@@ -14,6 +14,20 @@ function showLoading(){
  */
 function hideLoading(){
     jQuery("#Loading").removeClass('is-shown');
+    jQuery('#LoadingBarWrapper').hide();
+}
+
+/**
+ * Shows the loading message and the progress bar
+ * @param  {[type]} ev [description]
+ * @return {[type]}    [description]
+ */
+function showProgress(ev){
+    showLoading();
+    jQuery('#LoadingBarWrapper').show();
+
+    var value:string = ""+((ev.loaded / ev.total) * 100);
+    jQuery('#LoadingBar').val( value );
 }
 
 /**
@@ -763,6 +777,10 @@ module Model {
         public removeCSetById(id: string) {
             this.chromosomeSets.remove(id);
         }
+
+        /**
+         * 
+         */
         public load_str(content: string, id:string, type: string, chro?: string): ChromosomeSet {
             var parser : Parsers.Parser = Parsers.registry.getParser(type);
             assert(parser !== undefined);
@@ -774,6 +792,10 @@ module Model {
             this.chromosomeSets.set(id, cs);
             return cs;
         }
+
+        /**
+         *
+         */
         public load_url(url: string, type: string, chro?: string): ChromosomeSet {
             var xmlHttp = new XMLHttpRequest();
             xmlHttp.open( "GET", url, false);

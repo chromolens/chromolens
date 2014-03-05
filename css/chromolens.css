@@ -155,7 +155,6 @@ g.ticklabels text {
 	background:#fff4c8;
 	border: 0.08em solid black;
 	width:12em;
-	height:2em;
 
 	display:none;
 	background-color: white;
@@ -175,12 +174,12 @@ g.ticklabels text {
 }
 
 #LoadingText {
-	position: absolute;
-	top: 0.5em;
-	left: 2em;
+	display: block;
+	line-height: 35px;
+	margin-left: 2em;
 }
 
-#LoadingAnimation{
+#LoadingAnimation {
 	position: absolute;
 	width: 0;
 	height: 0;
@@ -197,10 +196,20 @@ g.ticklabels text {
 	-khtml-border-radius: 0.5em;
 }
 
-#LoadingAnimation{
+#LoadingAnimation {
 	animation: bganim 0.5s ease 1s infinite;
 	-moz-animation: bganim 0.5s ease 1s infinite;
 	-webkit-animation: bganim 0.5s ease 1s infinite;
+}
+
+#LoadingBarWrapper {
+	display: none;
+	margin-left: 2em;
+	margin-bottom: 0.5em;
+}
+
+#LoadingBar {
+	width: 140px;
 }
 
 @keyframes bganim {

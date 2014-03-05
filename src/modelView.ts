@@ -111,6 +111,8 @@ module GenomeViewer {
                     self.loadFile(filename, parser_type, this.responseText);
                 }
                 req.open("get", filename, true);
+                req.onprogress = showProgress;
+
                 try {
                     req.send();
                 } catch (e) {
