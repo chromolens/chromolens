@@ -200,7 +200,7 @@ module BedGraph {
             lines.setStartPoint( new RegExp(desired_chroname+"\\s") );
 
             while ((line = lines.next()) !== null) {
-                var components: string[] = line.split(' ');
+                var components: string[] = line.split('\t');
                 
                 assert(components.length == 4);
                 var chroname = components[0];

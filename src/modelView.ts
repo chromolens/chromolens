@@ -107,6 +107,7 @@ module GenomeViewer {
             var self = this;
 
             if (content === undefined) {
+                showLoading();
                 var req:XMLHttpRequest = new XMLHttpRequest();
                 req.onload = function() {
                     self.loadFile(filename, parser_type, this.responseText);
@@ -123,6 +124,7 @@ module GenomeViewer {
             }
 
             try {
+                hideLoading();
                 var cSet:Model.ChromosomeSet = Model.manager.load_str(content, filename, parser_type);
                 this.filenames.push(filename);
                 var filenames: D3.UpdateSelection = this.fileNamesSelect.selectAll("option").data(this.filenames);
@@ -133,7 +135,6 @@ module GenomeViewer {
                 this.setChroView(filename);
                 this.addButton.attr('disabled', null);
                 this.forgetButton.attr('disabled', null);
-                hideLoading();
             } catch (e) {
                 alert(e);
             }
