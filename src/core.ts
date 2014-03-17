@@ -26,11 +26,13 @@ function showProgress(ev){
     showLoading();
     jQuery('#LoadingBarWrapper').show();
 
-    var value:Number = (ev.loaded / ev.total) * 100;
-    jQuery('#LoadingBar').val( value.toString() );
+    var value:number = (ev.loaded / ev.total) * 100;
+    if( isFinite(value) ){
+        jQuery('#LoadingBar').val(value.toString());
 
-    if( value >= 100 ){
-        hideLoading();
+        if( value >= 100 ){
+            hideLoading();
+        }
     }
 }
 
