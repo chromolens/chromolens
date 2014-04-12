@@ -273,12 +273,12 @@ module GenomeViewer {
             this.g_tickLabels = this.svg.append("g")
                 .attr("class", "ticklabels");
 
-            this.g_line = this.svg.append("line").
-                attr("x1", 0).
-                attr("x2", this.width).
-                attr("y1", 0).
-                attr("y2", 0).
-                attr("style", "stroke:rgb(255,0,0);stroke-width:2");
+            this.g_line = this.svg.append("line")
+                .attr("x1", 0)
+                .attr("x2", this.width)
+                .attr("y1", 0)
+                .attr("y2", 0)
+                .attr("style", "stroke:rgb(255,0,0);stroke-width:2");
         }
 
         public getMinSize(): number[] {

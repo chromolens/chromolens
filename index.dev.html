@@ -202,7 +202,7 @@
 						<input type="button" id="add" value="Confirm" disabled="true" onclick="
 						document.getElementById('genomesvg').style.border = '0.2em groove silver';
 						var elements = document.getElementsByClassName('hide');
-						for (var e in elements) {elements[e].style.display = 'block';};"
+						for (var e in elements) { if(elements[e].style) elements[e].style.display = 'block'; }"
 						/>
 					</p>
 				</form>
