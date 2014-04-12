@@ -1,304 +1,324 @@
 html{
-	height: 100vh;
+    height: 100vh;
 }
 
 body{
-	margin: 0;
-	height: 100vh;
-	background: -moz-linear-gradient(top,LightGray 0em, white 10em);
-	background: -webkit-linear-gradient(top,LightGray 0em, white 10em);
-	background: -o-linear-gradient(top,LightGray 0em, white 10em);
-	background: -ms-linear-gradient(top,LightGray 0em, white 10em);
+    margin: 0;
+    height: 100vh;
+    background: -moz-linear-gradient(top,LightGray 0em, white 10em);
+    background: -webkit-linear-gradient(top,LightGray 0em, white 10em);
+    background: -o-linear-gradient(top,LightGray 0em, white 10em);
+    background: -ms-linear-gradient(top,LightGray 0em, white 10em);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 #title{
-	position: absolute;
-	height: 10%;
-	min-height: 10em;
-	max-height: 20em;
-	width: 100vw;
+    position: absolute;
+    height: 10%;
+    min-height: 10em;
+    max-height: 20em;
+    width: 100vw;
 }
 
 #ChromoLensIconTitle{
-	display:none;
-	position: fixed;
-	min-width: 5em;
-	width: 8%;
-	max-width: 10em;
-	top: 2em;
-	left: 2em;
+    display:none;
+    position: fixed;
+    min-width: 5em;
+    width: 8%;
+    max-width: 10em;
+    top: 2em;
+    left: 2em;
 }
 
 #ChromoLensTitle{
-	position: fixed;
-	top: 2em;
-	width: 20%;
-	min-width: 10em;
-	max-width: 20em;
-	left: 50%;
-	margin-left: -10em;
+    position: fixed;
+    top: 2em;
+    width: 20%;
+    min-width: 10em;
+    max-width: 20em;
+    left: 50%;
+    margin-left: -10em;
 }
 
 #CSItitle{
-	position: fixed;
-	width: 20%;
-	min-width: 10em;
-	max-width: 20em;
-	right: 2em;
+    position: fixed;
+    width: 20%;
+    min-width: 10em;
+    max-width: 20em;
+    right: 2em;
 }
 
 #ChromoLensLogo, #CSIlogo, #ChromoLensIcon{
-	width: 100%;
+    width: 100%;
 }
 
 #genomechoice{
-	position: absolute;
-	top: 10em;
-	width: 20%;
-	min-width: 10em;
-	max-width: 20em;
-	left: 50%;
-	margin-left: -10em;
+    position: absolute;
+    top: 10em;
+    width: 20%;
+    min-width: 10em;
+    max-width: 20em;
+    left: 50%;
+    margin-left: -10em;
 }
 
 #ChromoLens {
-	position: relative;
-	left: 12em;
-	top : 2em;
-	right: 20em;
+    position: relative;
+    left: 12em;
+    top : 2em;
+    right: 20em;
 }
 
 svg.genome {
-	-moz-border-radius: 1em;
-	-webkit-border-radius: 1em;
-	-khtml-border-radius: 1em;
-		border-radius: 1em;
-	width: auto;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -khtml-border-radius: 1em;
+        border-radius: 1em;
+    width: auto;
 }
 
 .view {
-	margin-left: auto;
-	margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 g.arcs path, g.dd_arcs path, g.ii_arcs path {
-	stroke-width: 1;
-	fill: none;
-	opacity: 1;
+    stroke-width: 1;
+    fill: none;
+    opacity: 1;
 }
 
 g.arcs path {
-	stroke: green;
+    stroke: green;
 }
 
 g.dd_arcs path {
-	stroke: blue;
+    stroke: blue;
 }
 
 g.ii_arcs path {
-	stroke: green;
-	stroke-dasharray: 2, 2;
+    stroke: green;
+    stroke-dasharray: 2, 2;
 }
 
 g.bindings circle {
-	stroke-width: 2;
+    stroke-width: 2;
 }
 
 .cytoband {
-	display: none;
+    display: none;
 }
 
 g.ticks line {
-	stroke-width: 1;
-	opacity: 1;
+    stroke-width: 1;
+    opacity: 1;
 }
 
 g.ticklabels text {
-	text-anchor: middle;
+    text-anchor: middle;
 }
 
 .gff3 {
-	fill: white;
-	stroke-width:1;
-	stroke: black;
+    fill: white;
+    stroke-width:1;
+    stroke: black;
 }
 
 .gff3_gene {
-	fill: LightBlue;
+    fill: LightBlue;
 }
 
 .gff3_mRNA {
-	fill: green;
+    fill: green;
 }
 
 .gff3_exon {
-	fill: LightGray;
+    fill: LightGray;
 }
 
 .gff3_CDS {
 }
 
 .gff3_CDS__fragment {
-	fill: orange;
+    fill: orange;
 }
 
 .gff3_TF_binding_site {
-	fill: FireBrick;
+    fill: FireBrick;
 }
 
 #Loading {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	background:#fff4c8;
-	border: 0.08em solid black;
-	width:12em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background:#fff4c8;
+    border: 0.08em solid black;
+    width:12em;
 
-	display:none;
-	background-color: white;
-	color: black;
+    display:none;
+    background-color: white;
+    color: black;
 
-	z-index:100;
-	border-radius: 0.5em;
+    z-index:100;
+    border-radius: 0.5em;
 }
 
 #Loading.is-shown {
-	display: block;
-	-webkit-transform: translate( -50%, -50% );
-	-moz-transform: translate( -50%, -50% );
-	-ms-transform: translate( -50%, -50% );
-	-o-transform: translate( -50%, -50% );
-	transform: translate( -50%, -50% );
+    display: block;
+    -webkit-transform: translate( -50%, -50% );
+    -moz-transform: translate( -50%, -50% );
+    -ms-transform: translate( -50%, -50% );
+    -o-transform: translate( -50%, -50% );
+    transform: translate( -50%, -50% );
 }
 
 #LoadingText {
-	display: block;
-	line-height: 35px;
-	margin-left: 2em;
+    display: block;
+    line-height: 35px;
+    margin-left: 2em;
 }
 
 #LoadingAnimation {
-	position: absolute;
-	width: 0;
-	height: 0;
-	margin: 0 auto;
-	left: 0.5em;
-	top:0.5em;
-	border-right:0.5em solid #444;
-	border-top:0.5em solid #777;
-	border-left:0.5em solid #aaa;
-	border-bottom:0.5em solid #eee;
-	border-radius: 0.5em;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-khtml-border-radius: 0.5em;
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    left: 0.5em;
+    top:0.5em;
+    border-right:0.5em solid #444;
+    border-top:0.5em solid #777;
+    border-left:0.5em solid #aaa;
+    border-bottom:0.5em solid #eee;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
 }
 
 #LoadingAnimation {
-	animation: bganim 0.5s ease 1s infinite;
-	-moz-animation: bganim 0.5s ease 1s infinite;
-	-webkit-animation: bganim 0.5s ease 1s infinite;
+    animation: bganim 0.5s ease 1s infinite;
+    -moz-animation: bganim 0.5s ease 1s infinite;
+    -webkit-animation: bganim 0.5s ease 1s infinite;
 }
 
 #LoadingBarWrapper {
-	display: none;
-	margin-left: 2em;
-	margin-bottom: 0.5em;
+    display: none;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
 }
 
 #LoadingBar {
-	width: 140px;
+    width: 140px;
 }
 
 @keyframes bganim {
-	from { transform:rotate(0deg); } to { transform:rotate(360deg); }
+    from { transform:rotate(0deg); } to { transform:rotate(360deg); }
 }
 @-moz-keyframes bganim {
-	from { -moz-transform:rotate(0deg); } to { -moz-transform:rotate(360deg); }
+    from { -moz-transform:rotate(0deg); } to { -moz-transform:rotate(360deg); }
 }
 @-webkit-keyframes bganim {
-	from { -webkit-transform:rotate(0deg); } to { -webkit-transform:rotate(360deg); }
+    from { -webkit-transform:rotate(0deg); } to { -webkit-transform:rotate(360deg); }
 }
 
 
 div.floating-info {
-	position:fixed;
-	background:#fff4c8;
-	border: 0.08em solid black;
-	width:10em;
-	z-index:100;
+    position:fixed;
+    background:#fff4c8;
+    border: 0.08em solid black;
+    width:10em;
+    z-index:100;
 }
 
 #gff3_info {
-	display:none;
-	background: white;
-	font-size: small;
-	border: 0.08em solid black;
-	top:2em;
-	right:20em;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-khtml-border-radius: 0.5em;
-		border-radius: 0.5em;
-	min-width: 20em;
-	height:6em;
+    display:none;
+    background: white;
+    font-size: small;
+    border: 0.08em solid black;
+    top:2em;
+    right:20em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
+        border-radius: 0.5em;
+    min-width: 20em;
+    height:6em;
 }
 
 #binding_info {
-	display:none;
-	background: white;
-	font-size: small;
-	border: 0.08em solid black;
-	top:2em;
-	right:20em;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-khtml-border-radius: 0.5em;
-		border-radius: 0.5em;
-	min-width:10em;
-	height:6em;
+    display:none;
+    background: white;
+    font-size: small;
+    border: 0.08em solid black;
+    top:2em;
+    right:20em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
+        border-radius: 0.5em;
+    min-width:10em;
+    height:6em;
 }
 
 #isf_info {
-	display:none;
-	background: white;
-	font-size: small;
-	border: 0.08em solid black;
-	top:2em;
-	right:20em;
-	-moz-border-radius: 0.5em;
-	-webkit-border-radius: 0.5em;
-	-khtml-border-radius: 0.5em;
-		border-radius: 0.5em;
-	min-width:10em;
-	height:6em;
+    display:none;
+    background: white;
+    font-size: small;
+    border: 0.08em solid black;
+    top:2em;
+    right:20em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -khtml-border-radius: 0.5em;
+        border-radius: 0.5em;
+    min-width:10em;
+    height:6em;
 }
 
 .icon_close {
-	height: 6.25em;
-	width: 6.25em;
-	fill: black;
+    height: 6.25em;
+    width: 6.25em;
+    fill: black;
 }
 
 .icon_close:hover {
-	fill: gray;
+    fill: gray;
 }
 
 .icon_close:active {
-	fill: red;
+    fill: red;
 }
 
 button {
-	display: inline-block;
-	line-height: 1;
-	padding: .3em .3em;
+    display: inline-block;
+    line-height: 1;
+    padding: .3em .3em;
 }
 
 button, select, input {
-	-moz-border-radius: .4em;
-	-webkit-border-radius: .4em;
-	-khtml-border-radius: .4em;
-		border-radius: .4em;
+    -moz-border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -khtml-border-radius: .4em;
+        border-radius: .4em;
+}
+
+#dropfile-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: black;
+    border: dashed 10px gray;
+    opacity: 0.7;
+}
+
+#pcfiles-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
