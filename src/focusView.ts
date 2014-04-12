@@ -106,7 +106,7 @@ module GenomeViewer {
                 p.setPos(x, y);
                 var psize = p.getOuterSize();
                 y += psize[1];
-                });
+            });
         }
 
         public setSize(w:number, h:number) {

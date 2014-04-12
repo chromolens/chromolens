@@ -630,7 +630,7 @@ module Views {
             this.scale = newScale;
             this.panels.forEach(function(view) {
                 view.setScale(newScale, duration);
-                });
+            });
         }
 
         /**

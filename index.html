@@ -105,7 +105,7 @@
             <div>
                 <form id="ModelsView">
                     <p id="parsers" style="display:none"></p>
-                    <p style="display:none">Load a file: <input type="file" id="file" name="file"/></p>
+                    <p style="display:none">Load a file: <input type="file" id="_file" name="_file"/></p>
                     <p class="hide" style="display:none">
                         Loaded files:
                         <select type="genomechoice" id="filenames" ></select>
@@ -181,6 +181,20 @@
                     <h3>No files available yet.</h3>
                 </div>
             </div>
+
+            <div class="hide">
+                <h2>Load Files from your computer</h2>
+
+                <ul id="pcfiles-list">
+                    <li><h3>No files available yet.</h3></li>
+                </ul>
+                <p>
+                    <input type="file" id="pcfile" /><br />
+                    or drop a file in the window to add to the list
+                </p>
+
+                <div id="dropfile-modal"></div>
+            </div>
         </div>
 
         <div id="Loading">
@@ -213,9 +227,9 @@
         <script type="text/javascript" src="js/gff3.js" ></script>
 
         <script type="text/javascript">
-            function preload(filename,type) {
+            function preload(filename,type,content) {
                 showLoading();
-                Views.mainView.getSubView('modelsView').loadFile(filename,type);
+                Views.mainView.getSubView('modelsView').loadFile(filename,type,content);
                 hideLoading();
             }
 
@@ -278,6 +292,81 @@
                         break;
                 }
             }
+
+            (function($){
+                'use strict';
+
+                var body = $(document.body),
+                    modal = $('#dropfile-modal'),
+                    files = [];
+
+                body.on('dragenter', function(ev){
+                    modal.fadeIn();
+                    return false;
+                });
+
+
+                body.on("dragover", function(ev){
+                    return false;
+                });
+
+                modal.on('click', function(ev){
+                    ev.preventDefault();
+                    modal.fadeOut();
+                    return false;
+                });
+
+                modal.on('drop', function(ev){
+                    ev.preventDefault();
+                    modal.fadeOut();
+
+                    addFileToList(ev.originalEvent.dataTransfer.files[0]);
+                    return false;
+                });
+
+                $('#pcfile').on('change', function(ev){
+                    addFileToList(ev.currentTarget.files[0]);
+                    ev.currentTarget.value = '';
+                });
+
+                function addFileToList(file){
+                    files.push( file );
+                    updateFileList();
+                }
+
+                function updateFileList(){
+                    var list = $('#pcfiles-list');
+                    list.empty();
+
+                    $.each(files, function(i, file){
+                        var li = $('<li>'),
+                            a = $('<input>').attr("type", 'button');
+
+                        a.attr('data-fileindex', i);
+                        a.val( file.name );
+                        a.on('click', function(ev){
+                            loadFileByIndex(ev.currentTarget.getAttribute('data-fileindex'));
+                            ev.currentTarget.disabled = true;
+                        });
+
+                        li.append(a);
+                        list.append( li );
+                    });
+                }
+
+                function loadFileByIndex(index){
+                    var file = files[index],
+                        reader = new FileReader();
+
+                    reader.onload = function (event) {
+                        preload(file.name, 'isf', event.target.result);
+                    };
+
+                    reader.readAsText(file);
+                }
+
+
+            })(jQuery);
 
         </script>
 

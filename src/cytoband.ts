@@ -213,9 +213,13 @@ module Cytoband {
         constructor(parent: Views.View, name:string, role:string, iter:Model.ChromosomeIterator<any[]>, args?) {
             super(parent, name, role, args);
             var ob = this.svg.append("foreignObject")
-                .attr("width", this.width).attr("height", this.height);
+                .attr("width", this.width)
+                .attr("height", this.height);
+
             this.canvas = ob.append("xhtml:canvas")
-                .attr("width", this.width).attr("height", this.height);
+                .attr("width", this.width)
+                .attr("height", this.height);
+
             this.iter = iter;
         }
 
