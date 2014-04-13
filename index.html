@@ -382,6 +382,8 @@
                     var file = files[index],
                         reader = new FileReader();
 
+                    reader.onprogress = showProgress;
+
                     reader.onload = function (event) {
                         preload(file.name, type, event.target.result);
                     };
