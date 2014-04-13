@@ -106,10 +106,10 @@
                 <form id="ModelsView">
                     <p id="parsers" style="display:none"></p>
                     <p style="display:none">Load a file: <input type="file" id="_file" name="_file"/></p>
-                    <p class="hide" style="display:none">
+                    <p class="hide">
                         Loaded files:
                         <select type="genomechoice" id="filenames" ></select>
-                        <input type="button" id="forget" value="Remove" disabled="true"/>
+                        <!-- <input type="button" id="forget" value="Remove" disabled="true" /> -->
                     </p>
                     <p>
                         Chromosome:
@@ -186,7 +186,7 @@
                 <h2>Load Files from your computer</h2>
 
                 <ul id="pcfiles-list">
-                    <li><h3>No files available yet.</h3></li>
+                    <li id="pcfiles-list-first"><h3>No files available yet.</h3></li>
                 </ul>
                 <p>
                     <input type="file" id="pcfile" /><br />
@@ -298,7 +298,16 @@
 
                 var body = $(document.body),
                     modal = $('#dropfile-modal'),
-                    files = [];
+                    re = /\.(\w+)$/,
+                    files = [],
+                    SELECT;
+
+                SELECT =  "<select>";
+                SELECT += "<option value='bedGraph' data-search='bedgraph'>bedgraph</option>";
+                SELECT += "<option value='gff3' data-search='gff'>gff</option>";
+                SELECT += "<option value='isf' data-search='isf'>isf</option>";
+                SELECT += "<option value='cytoband' data-search='txt'>txt</option>";
+                SELECT += "</select>";
 
                 body.on('dragenter', function(ev){
                     modal.fadeIn();
@@ -330,36 +339,51 @@
                 });
 
                 function addFileToList(file){
-                    files.push( file );
+                    $('#pcfiles-list-first').hide();
+                    files.push(file);
                     updateFileList();
                 }
 
                 function updateFileList(){
                     var list = $('#pcfiles-list');
-                    list.empty();
 
                     $.each(files, function(i, file){
+                        if( file.__added === true ){
+                            return;
+                        }
+                        file.__added = true;
+
                         var li = $('<li>'),
-                            a = $('<input>').attr("type", 'button');
+                            a = $('<input>').attr("type", 'button'),
+                            select = $(SELECT),
+                            type;
+
+                        if( re.test(file.name) ){
+                            type = re.exec(file.name)[1];
+                            select.find('[data-search="'+type+'"]').attr('selected', 'selected');
+                        }
 
                         a.attr('data-fileindex', i);
-                        a.val( file.name );
+                        a.val(file.name);
                         a.on('click', function(ev){
-                            loadFileByIndex(ev.currentTarget.getAttribute('data-fileindex'));
+                            var select = ev.currentTarget.nextElementSibling;
+                            loadFileByIndex(ev.currentTarget.getAttribute('data-fileindex'), select.value);
                             ev.currentTarget.disabled = true;
+                            select.disabled = true;
                         });
 
                         li.append(a);
+                        li.append(select);
                         list.append( li );
                     });
                 }
 
-                function loadFileByIndex(index){
+                function loadFileByIndex(index, type){
                     var file = files[index],
                         reader = new FileReader();
 
                     reader.onload = function (event) {
-                        preload(file.name, 'isf', event.target.result);
+                        preload(file.name, type, event.target.result);
                     };
 
                     reader.readAsText(file);
